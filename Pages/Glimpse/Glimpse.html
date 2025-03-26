@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="Glimpse.css" />
-  <link rel="stylesheet" href="../../Components/Navbar/Nav.css" />
+  <link rel="stylesheet" href="./Glimpse.css" />
+  <link rel="stylesheet" href="/Company-Website/Components/Navbar/Nav.css" />
   <title>Home</title>
   <!-- Add GSAP library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
@@ -13,7 +13,7 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
-      <a href="../Glimpse/Glimpse.html"><img src="../../assets/bbbb-02[1].png" alt="logo"></a>
+      <a href="/Company-Website/Pages/Glimpse/Glimpse.html"><img src="/Company-Website/assets/bbbb-02[1].png" alt="logo"></a>
     </div>
     <div class="hamburger">
       <span class="bar"></span>
@@ -22,12 +22,12 @@
     </div>
     <ul class="nav-links">
       <div class="nav-left">
-        <li><a href="../Glimpse/Glimpse.html" class="active">Glimpse</a></li>
-        <li><a href="../Offerings/Offerings.html">Offerings</a></li>
+        <li><a href="/Company-Website/Pages/Glimpse/Glimpse.html" class="active">Glimpse</a></li>
+        <li><a href="/Company-Website/Pages/Offerings/Offerings.html">Offerings</a></li>
       </div>
       <div class="nav-right">
-        <li><a href="../Minds/Minds.html">Minds Behind</a></li>
-        <li><a href="../LetsTalk/LetsTalk.html">Let's Talk</a></li>
+        <li><a href="/Company-Website/Pages/Minds/Minds.html">Minds Behind</a></li>
+        <li><a href="/Company-Website/Pages/LetsTalk/LetsTalk.html">Let's Talk</a></li>
       </div>
     </ul>
   </nav>
@@ -35,7 +35,7 @@
   <!-- HomeHero Section -->
   <section class="HomeHero">
     <video autoplay loop muted playsinline class="videoHero">
-      <source src="../../assets/herovideo.MP4" type="video/mp4" />
+      <source src="/Company-Website/assets/Herovideo.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
     <h1 class="HomeHero-text">
@@ -104,7 +104,7 @@
     </div>
     <div class="main-project" onmouseenter="stopAutoSlide()" onmouseleave="startAutoSlide()">
       <div class="featured-project">
-        <img id="featured-image" src="../../assets/tdex.webp" alt="T Dex" />
+        <img id="featured-image" src="/Company-Website/assets/tdex.webp" alt="T Dex" />
       </div>
     </div>
     <div class="queue-container" id="queue-container"></div>
@@ -113,17 +113,17 @@
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="Glimpse.js"></script>
-  <script src="../../Components/Navbar/Nav.js"></script>
+  <script src="./Glimpse.js"></script>
+  <script src="/Company-Website/Components/Navbar/Nav.js"></script>
   <script>
     $(function() {
-            $("#footer-container").load("../../Components/Footer/Footer.html", function() {
+            $("#footer-container").load("/Company-Website/Components/Footer/Footer.html", function() {
                 $("<link/>", {
                     rel: "stylesheet",
                     type: "text/css",
-                    href: "../../Components/Footer/Footer.css"
+                    href: "/Company-Website/Components/Footer/Footer.css"
                 }).appendTo("head");
-                $.getScript("../../Components/Footer/Footer.js")
+                $.getScript("/Company-Website/Components/Footer/Footer.js")
                     .done(function() {
                         console.log("Footer JS loaded successfully");
                     })
