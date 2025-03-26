@@ -1,0 +1,461 @@
+/* Reset and Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  box-sizing: border-box;
+}
+
+/* About Background Image Section */
+.About-background-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/pixelcut-.png');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.About-background-image p {
+  color: white;
+  font-size: 64px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* About Story Section */
+.about-story {
+  background-image: url('./assets/path_to_handshake.webp');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  width: 100%;
+}
+
+.about-story h1 {
+  font-size: 50px;
+}
+
+.about-story p { /* Fixed typo from .abiut-story */
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Triple-T Section */
+.Triple-T {
+  background-color: #010d1a;
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  font-size: 3.5em;
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.text {
+  list-style: none;
+  display: flex;
+  border-bottom: 0;
+  transition: all 1s ease-in-out;
+  text-decoration: none;
+}
+
+.text li {
+  font-weight: 700;
+  font-size: 2.5em;
+  color: #fff;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+  max-width: 2em;
+}
+
+.text.hidden li.spaced {
+  padding-left: 0;
+  color: #e45f06;
+}
+
+.text li.spaced {
+  padding-left: 0.5em;
+  color: #e45f06;
+}
+
+.text.hidden li.ghost {
+  opacity: 0;
+  max-width: 0;
+}
+
+.description {
+  font-size: 1.2em;
+  color: #ccc;
+  margin-top: 20px;
+  max-width: 600px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(0);
+}
+
+.hidden.description {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 5rem 2rem;
+  background-color: #f9f9f9;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.why-choose-us.section-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.why-choose-us-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.why-choose-us-header h2 {
+  font-size: 2.5rem;
+  color: #e45f06;
+  margin-bottom: 1rem;
+}
+
+.reasons-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.reason-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease;
+}
+
+.reason-card:hover {
+  transform: translateY(-10px);
+}
+
+.reason-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: #e45f06;
+  font-size: 2rem;
+}
+
+.reason-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #e45f06;
+}
+
+.reason-card p {
+  color: black;
+  line-height: 1.6;
+}
+
+/* Services Section */
+.services-section {
+  padding: 5rem 2rem;
+  background-color: #f9f9f9;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.services-section.section-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.services-header h2 {
+  font-size: 2.5rem;
+  color: #e45f06;
+  margin-bottom: 1rem;
+}
+
+.services-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.service-card {
+  width: 100%;
+}
+
+.service-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.service-content.image-left {
+  flex-direction: row;
+}
+
+.service-content.image-right {
+  flex-direction: row-reverse;
+}
+
+.service-text {
+  flex: 1;
+}
+
+.service-text h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.service-text p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.service-image {
+  flex: 1;
+}
+
+.service-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  /* About Background Image */
+  .About-background-image {
+      height: 400px;
+  }
+  .About-background-image p {
+      font-size: 48px;
+  }
+
+  /* About Story */
+  .about-story {
+      height: 50vh;
+  }
+  .about-story h1 {
+      font-size: 40px;
+  }
+  .about-story p {
+      font-size: 20px;
+  }
+
+  /* Triple-T */
+  .Triple-T {
+      height: 50vh;
+  }
+  .heading {
+      font-size: 2.5em;
+  }
+  .text li {
+      font-size: 2em;
+  }
+  .description {
+      font-size: 1em;
+      max-width: 80%;
+  }
+
+  /* Why Choose Us */
+  .reasons-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /* About Background Image */
+  .About-background-image {
+      height: 350px;
+  }
+  .About-background-image p {
+      font-size: 36px;
+  }
+
+  /* About Story */
+  .about-story {
+      height: 40vh;
+  }
+  .about-story h1 {
+      font-size: 32px;
+  }
+  .about-story p {
+      font-size: 18px;
+  }
+
+  /* Triple-T */
+  .Triple-T {
+      height: 45vh;
+  }
+  .heading {
+      font-size: 2em;
+  }
+  .text li {
+      font-size: 1.5em;
+  }
+  .description {
+      font-size: 0.9em;
+      max-width: 90%;
+  }
+
+  /* Why Choose Us */
+  .why-choose-us {
+      padding: 3rem 1rem;
+  }
+  .why-choose-us-header h2 {
+      font-size: 2rem;
+  }
+
+  /* Services Section */
+  .services-section {
+      padding: 3rem 1rem;
+  }
+  .services-header {
+      margin-bottom: 2rem;
+  }
+  .services-header h2 {
+      font-size: 2rem;
+  }
+  .services-container {
+      gap: 2rem;
+  }
+  .service-content {
+      flex-direction: column !important;
+      padding: 1.5rem;
+  }
+  .service-image img {
+      height: 200px;
+  }
+  .service-text h3 {
+      font-size: 1.5rem;
+  }
+  .service-text p {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  /* About Background Image */
+  .About-background-image {
+      height: 300px;
+  }
+  .About-background-image p {
+      font-size: 28px;
+  }
+
+  /* About Story */
+  .about-story {
+      height: 35vh;
+  }
+  .about-story h1 {
+      font-size: 24px;
+  }
+  .about-story p {
+      font-size: 16px;
+  }
+
+  /* Triple-T */
+  .Triple-T {
+      height: 40vh;
+  }
+  .heading {
+      font-size: 1.5em;
+  }
+  .text li {
+      font-size: 1.2em;
+  }
+  .description {
+      font-size: 0.8em;
+      max-width: 95%;
+  }
+
+  /* Why Choose Us */
+  .reasons-container {
+      grid-template-columns: 1fr;
+  }
+  .why-choose-us-header h2 {
+      font-size: 2rem;
+  }
+
+  /* Services Section */
+  .services-header h2 {
+      font-size: 1.5rem;
+  }
+  .services-header p {
+      font-size: 1rem;
+  }
+  .service-text h3 {
+      font-size: 1.3rem;
+  }
+  .service-text p {
+      font-size: 0.85rem;
+  }
+  .service-image img {
+      height: 150px;
+  }
+}
+
+/* Smooth Transitions for All Sections */
+.About-background-image,
+.about-story,
+.Triple-T,
+.why-choose-us,
+.services-section {
+  transition: all 0.5s ease;
+}

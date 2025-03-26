@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./LetsTalk.css">
+    <link rel="stylesheet" href="../../Components/Navbar/Nav.css"> <!-- Added Navbar CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../Glimpse/Glimpse.html"><img src="../../assets/bbbb-02[1].png" alt="logo"></a>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <div class="nav-left">
+                <li><a href="../Glimpse/Glimpse.html">Glimpse</a></li>
+                <li><a href="../Offerings/Offerings.html">Offerings</a></li>
+            </div>
+            <div class="nav-right">
+                <li><a href="../Minds/Minds.html">Minds Behind</a></li>
+                <li><a href="../LetsTalk/LetsTalk.html" class="active">Let's Talk</a></li>
+            </div>
+        </ul>
+    </nav>
+    <div class="contact-us-page">
+        <main class="main">
+            <div class="background-image">
+                <p>Connect Us</p>
+            </div>
+            <div class="content">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2>Connect Us</h2>
+                    <form id="contactForm">
+                        <input type="text" name="user_name" id="user_name" placeholder="Name" required>
+                        <input type="email" name="user_email" id="user_email" placeholder="Email" required>
+                        <div class="phone-input-container">
+                            <select name="country_code" id="country_code" required>
+                                <option value="+91" selected>+91 (IN)</option>
+                                <option value="+1">+1 (USA)</option>
+                                <option value="+44">+44 (UK)</option>
+                                <option value="+33">+33 (France)</option>
+                                <option value="+81">+81 (Japan)</option>
+                            </select>
+                            <input type="tel" name="user_phone" id="user_phone" placeholder="Phone Number" required>
+                        </div>
+                        <select name="user_industry" id="user_industry" required>
+                            <option value="" disabled selected>Industry</option>
+                            <option value="tech">Tech</option>
+                            <option value="finance">Finance</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <select name="user_service" id="user_service" required>
+                            <option value="" disabled selected>Service Interested In</option>
+                            <option value="consulting">Consulting</option>
+                            <option value="development">Development</option>
+                            <option value="support">Support</option>
+                        </select>
+                        <textarea name="message" id="message" placeholder="Type Your Message" rows="4" required></textarea>
+                        <button type="submit" id="submitBtn">Send Message</button>
+                        <p id="successMessage" class="success-message" style="display: none; color: white; text-align: center;">Message sent successfully!</p>
+                        <p id="errorMessage" class="error-message" style="display: none; color: red; text-align: center;"></p>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Need More Information?</h2>
+                    <h3>Reach out and let's make things happen together!</h3>
+                    <div class="contact-container">
+                        <div class="info-item">
+                            <div class="icon phone-icon"></div>
+                            <div class="info-content">
+                                <span class="info-label">Contact</span>
+                                <span class="info-value">+91 xxxxxxxxxx</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon envelope-icon"></div>
+                            <div class="info-content">
+                                <span class="info-label">Email</span>
+                                <span class="info-value">theeyora@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon mappin-icon"></div>
+                            <div class="info-content">
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Coimbatore, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="footer-container"></div>
+
+    <!-- Existing scripts -->
+    <script>
+        $(function() {
+            $("#footer-container").load("../../Components/Footer/Footer.html", function() {
+                $("<link/>", {
+                    rel: "stylesheet",
+                    type: "text/css",
+                    href: "../../Components/Footer/Footer.css"
+                }).appendTo("head");
+                $.getScript("../../Components/Footer/Footer.js")
+                    .done(function() {
+                        console.log("Footer JS loaded successfully");
+                    })
+                    .fail(function() {
+                        console.error("Failed to load Footer JS");
+                    });
+            });
+        });
+    </script>
+
+    <script src="./LetsTalk.js"></script>
+    <script src="../../Components/Navbar/Nav.js"></script> <!-- Added Navbar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("KzbUKFvgwl5YNrNew");
+    </script>
+</body>
+</html>

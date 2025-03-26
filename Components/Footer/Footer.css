@@ -1,0 +1,210 @@
+* {
+  font-family: Montserrat, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  background-color: #232637;
+  color: #DBDCE0;
+  display: flex;
+  flex-direction: row; /* Default row for larger screens */
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  min-height: 15rem;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column; /* Column layout for logo */
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.logo-box {
+  width: 100%;
+  max-width: 200px;
+}
+
+.logo-box img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: contain;
+}
+
+.footer-center-wrapper {
+  display: flex;
+  flex-direction: row; /* Row layout for quick links and policies */
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 2;
+  gap: 2rem;
+  min-width: 300px;
+}
+
+.footer-links,
+.footer-policies {
+  flex: 1;
+  text-align: left;
+}
+
+.footer-links h3,
+.footer-policies h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #E45F06;
+}
+
+.footer-links ul,
+.policy-links {
+  list-style: none;
+}
+
+.footer-links ul li,
+.policy-links li {
+  margin: 0.5rem 0;
+}
+
+.footer-links ul li a,
+.policy-links li a {
+  color: #DBDCE0;
+  text-decoration: none;
+  font-size: 1.313rem;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.footer-links ul li a:hover,
+.policy-links li a:hover {
+  transform: translateX(5px);
+  color: #E45F06;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column; /* Column layout for social icons */
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.social-icons-footer {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #DBDCE0;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icon i {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.social-icon:hover i {
+  opacity: 0;
+}
+
+.social-icon:hover {
+  background-size: cover;
+  background-position: center;
+}
+
+.social-icon[data-image]:hover {
+  background-image: (var(--hover-image));
+}
+
+/* Specific hover images */
+.social-icon:nth-child(1):hover { background-image: url('../../assets/instagram.png'); }
+.social-icon:nth-child(2):hover { background-image: url('../../assets/linkedin.png'); }
+.social-icon:nth-child(3):hover { background-image: url('../../assets/twitter.png'); }
+.social-icon:nth-child(4):hover { background-image: url('../../assets/youtube.png'); }
+.social-icon:nth-child(5):hover { background-image: url('../../assets/facebook.png'); }
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 2rem 4rem;
+  }
+  .footer-center-wrapper {
+    gap: 1.5rem;
+  }
+  .footer-links ul li a,
+  .policy-links li a {
+    font-size: 1.1rem;
+  }
+  .social-icon {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Stack all sections vertically */
+    padding: 2rem;
+    text-align: center;
+  }
+  .footer-left,
+  .footer-center-wrapper,
+  .footer-social {
+    
+    gap: 4rem;
+  }
+  .footer-center-wrapper {
+    flex-direction: row; /* Stack quick links and policies on mobile */
+    align-items: center;
+  }
+  .footer-links,
+  .footer-policies {
+    width: 100%;
+  }
+  .footer-links h3,
+  .footer-policies h3 {
+    font-size: 1.25rem;
+  }
+  .social-icons-footer {
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem;
+  }
+  .logo-box {
+    max-width: 150px;
+  }
+  .footer-links ul li a,
+  .policy-links li a {
+    font-size: 0.9rem;
+  }
+  .social-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.2rem;
+  }
+  .footer-links h3,
+  .footer-policies h3 {
+    font-size: 1rem;
+  }
+}

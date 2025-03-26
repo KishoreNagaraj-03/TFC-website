@@ -1,0 +1,233 @@
+/* Keep your existing CSS mostly unchanged, just removing React-specific references */
+* {
+    font-family: Montserrat;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    padding: 0;
+     margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    background-color: #000;
+    color: white;
+    overflow-x: hidden;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.3rem;
+    z-index: 1100;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Default Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FDF8F8;
+    transition: all 0.4s ease-in-out;
+    background: transparent;
+    z-index: 1000;
+}
+
+/* Shrinking Effect on Scroll */
+.navbar.scrolled {
+    width: 60%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 0.625rem;
+}
+
+/* Default Logo Position */
+.logo img{
+    height: 80px;
+    width: auto;
+    transition: all 0.4s ease-in-out;
+
+
+}
+
+/* Center Logo on Scroll */
+.navbar.scrolled .logo {
+    position: absolute;
+    left: 47%;
+    transform: translateX(-50%);
+}
+
+/* Default Navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    margin: 0;
+    padding: 12px;
+    transition: all 0.4s ease-in-out;
+    width: 100%;
+    justify-content: right;
+}
+
+/* Adjusted Left & Right Sections */
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: 3rem;
+}
+
+/* Move Links when Navbar Shrinks */
+.navbar.scrolled .nav-links {
+    justify-content: space-between;
+}
+
+/* Navbar link styles */
+.nav-links li a {
+    text-decoration: none;
+    color: #FDF8F8;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+/* Underline effect on hover and active */
+.nav-links li a.active {
+    color: #E45F06;
+    text-decoration-line: none;
+}
+.nav-links li :hover {
+    text-decoration:#E45F06 underline 2px;
+    text-underline-offset: 8px;
+    transition: text-underline-offset 0.3s ease-in-out;    
+}
+
+.nav-links li a.active:hover{
+    text-decoration:#ffff underline ;
+    text-underline-offset: 8px;
+    transition: text-underline-offset 0.3s ease-in-out;
+    
+}
+
+
+
+
+/* Media Query */
+@media (max-width: 1024px) {
+    .navbar {
+      padding: 1.5rem 2rem;
+    }
+    .navbar.scrolled {
+      width: 80%; /* Slightly wider on tablets */
+    }
+    .nav-links {
+      gap: 2rem;
+    }
+    .nav-left,
+    .nav-right {
+      gap: 2rem;
+    }
+    .nav-links li a {
+      font-size: 1.1rem;
+    }
+  }
+@media (max-width: 786px) {
+    .navbar {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 1.5rem 3rem;
+        position: fixed;
+        top: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .navbar.scrolled {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 1.5rem 3rem;
+        border-radius: 0;
+    }
+
+    .navbar.scrolled .logo {
+        position: static;
+        left: 50%;
+        transform: none;
+    }
+
+    .logo {
+        position: static;
+        transform: none;
+    }
+
+    .logo img{
+        height: 60px;
+        width: auto;
+        transition: all 0.4s ease-in-out;
+        
+    
+    
+    }
+
+    .hamburger {
+        display: flex;
+        position: static;
+    }
+
+    .nav-links {
+        display: none;
+    }
+    .overlay {
+        height: 200vh;
+    }
+    .nav-links.active {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        transition: right 0.3s ease-in-out;
+        padding: 2rem;
+    }
+
+    .nav-left,
+    .nav-right {
+        flex-direction: column;
+    }
+}

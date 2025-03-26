@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Glimpse.css" />
+  <link rel="stylesheet" href="../../Components/Navbar/Nav.css" />
+  <title>Home</title>
+  <!-- Add GSAP library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="../Glimpse/Glimpse.html"><img src="../../assets/bbbb-02[1].png" alt="logo"></a>
+    </div>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="nav-links">
+      <div class="nav-left">
+        <li><a href="../Glimpse/Glimpse.html" class="active">Glimpse</a></li>
+        <li><a href="../Offerings/Offerings.html">Offerings</a></li>
+      </div>
+      <div class="nav-right">
+        <li><a href="../Minds/Minds.html">Minds Behind</a></li>
+        <li><a href="../LetsTalk/LetsTalk.html">Let's Talk</a></li>
+      </div>
+    </ul>
+  </nav>
+
+  <!-- HomeHero Section -->
+  <section class="HomeHero">
+    <video autoplay loop muted playsinline class="videoHero">
+      <source src="../../assets/herovideo.MP4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h1 class="HomeHero-text">
+      Where Innovation Meets <br />
+      <span class="word-container">
+        <span class="highlight2" id="current-word">Engineering</span>
+        <span class="highlight2" id="next-word">Excellence</span>
+      </span>
+    </h1>
+  </section>
+
+  <!-- Updated Service Page Section with GSAP -->
+  <div class="service-page">
+    <h1>Our Services</h1>
+    <div class="service-container">
+        <div class="service-grid" id="serviceGrid"></div>
+    </div>
+</div>
+
+
+  <section class="box-wrapper">
+    <!-- Vision Box -->
+    <div class="box" id="vision-box">
+      <div class="box-content" id="vision-content">
+        <div class="box-title">
+          <div class="title-bar1"></div>
+          <h2 id="vision-title">Vision</h2>
+        </div>
+      </div>
+      <div class="explanation" id="vision-explanation">
+        <p>
+          "Empowering global businesses with innovative, affordable tools, we deliver high-quality products that merge tech and human needs, optimizing costs and sustainability."
+        </p>
+      </div>
+    </div>
+
+    
+
+    <!-- Mission Box -->
+    <div class="box" id="mission-box">
+      <div class="box-content" id="mission-content">
+        <div class="box-title">
+          <div class="title-bar2"></div>
+          <h2 id="mission-title">Mission</h2>
+        </div>
+      </div>
+      <div class="explanation" id="mission-explanation">
+        <p>
+          "Empowering seamless integration of intelligent systems and smart infrastructure with human needs. Through engineering excellence, we craft innovative, cost-optimized solutions driving sustainable progress and limitless futures."+
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Carousel Section -->
+  <div class="carousel-heading">
+    <h1>Our Innovative Solutions, <br> That Enhanced Lives</h1>
+  </div>
+  <div class="carousel-container">
+    <div class="left-content">
+      <h2 id="project-title">T Dex</h2>
+      <p id="project-description">T–Dex is a heritage exploration app for Tamil Nadu, featuring a multilingual LLM, location alerts, and BLE tags for offline artifact info. Users can customize languages for a personalized experience.</p>
+    </div>
+    <div class="main-project" onmouseenter="stopAutoSlide()" onmouseleave="startAutoSlide()">
+      <div class="featured-project">
+        <img id="featured-image" src="../../assets/tdex.webp" alt="T Dex" />
+      </div>
+    </div>
+    <div class="queue-container" id="queue-container"></div>
+  </div>
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="Glimpse.js"></script>
+  <script src="../../Components/Navbar/Nav.js"></script>
+  <script>
+    $(function() {
+            $("#footer-container").load("../../Components/Footer/Footer.html", function() {
+                $("<link/>", {
+                    rel: "stylesheet",
+                    type: "text/css",
+                    href: "../../Components/Footer/Footer.css"
+                }).appendTo("head");
+                $.getScript("../../Components/Footer/Footer.js")
+                    .done(function() {
+                        console.log("Footer JS loaded successfully");
+                    })
+                    .fail(function() {
+                        console.error("Failed to load Footer JS");
+                    });
+            });
+        });
+  </script>
+
+</body>
+</html>
