@@ -74,12 +74,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const isMobile = window.innerWidth <= 1024; // Check if the device is mobile/tablet
 
   const services = [
-      { category: 'E-commerce', tagline: 'Where Clicks Create Commerce', description: 'Clicks summon boundless marketplace, desires meet discovery, stitching vibrant digital trade tapestry.', backgroundImage: '../../assets/ecommerce.png' },
-      { category: 'Ed-Tech', tagline: 'Light the Mind', description: 'Lighting the mind through technology, education transforms with interactive and immersive learning.', backgroundImage: '../../assets/edtech.png' },
-      { category: 'GenAI', tagline: 'Engineered to Inspire', description: 'AI sculpts solutions, inspiration fuels smarter tomorrow, driving transformative innovative change forward.', backgroundImage: '../../assets/Genai.png' },
-      { category: 'Civil', tagline: 'Push limits, Building Legacies', description: 'Building resilient infrastructures, shaping sustainable cities through innovative engineering solutions always.', backgroundImage: '../../assets/civill.png' },
-      { category: 'EV', tagline: 'Fused for the Future', description: 'Digital tools sync with hardware, weaving motion through the electric dawn seamlessly.', backgroundImage: '../../assets/EV.png' },
-      { category: 'IoT', tagline: 'Precision in Every Link', description: 'Sensors weave intellect, sparking impact for a vibrant, connected digital world community.', backgroundImage: '../../assets/iot.png' }
+      { category: 'E-commerce', tagline: 'Where Clicks Create Commerce', description: 'Clicks summon boundless marketplace, desires meet discovery, stitching vibrant digital trade tapestry.', backgroundImage: '/Company-Website/assets/ecommerce.png' },
+      { category: 'Ed-Tech', tagline: 'Light the Mind', description: 'Lighting the mind through technology, education transforms with interactive and immersive learning.', backgroundImage: '/Company-Website/assets/edtech.png' },
+      { category: 'GenAI', tagline: 'Engineered to Inspire', description: 'AI sculpts solutions, inspiration fuels smarter tomorrow, driving transformative innovative change forward.', backgroundImage: '/Company-Website/assets/Genai.png' },
+      { category: 'Civil', tagline: 'Push limits, Building Legacies', description: 'Building resilient infrastructures, shaping sustainable cities through innovative engineering solutions always.', backgroundImage: '/Company-Website/assets/civil.png' },
+      { category: 'EV', tagline: 'Fused for the Future', description: 'Digital tools sync with hardware, weaving motion through the electric dawn seamlessly.', backgroundImage: '/Company-Website/assets/EV.png' },
+      { category: 'IoT', tagline: 'Precision in Every Link', description: 'Sensors weave intellect, sparking impact for a vibrant, connected digital world community.', backgroundImage: '/Company-Website/assets/iot.png' }
   ];
 
   services.forEach(service => {
@@ -131,31 +131,31 @@ const projects = [
     title: "T Dex",
     description:
       "T–Dex is a heritage exploration app for Tamil Nadu, featuring a multilingual LLM, location alerts, and BLE tags for offline artifact info. Users can customize languages for a personalized experience.",
-    image: "../../assets/tdex.webp",
+    image: "/Company-Website/assets/tdex.webp",
   },
   {
     title: "AgroHive",
     description:
       "AgroHive is a smart marketplace connecting farmers directly with buyers. With AI-powered crop identification and multilingual support, it streamlines sales and empowers farmers.",
-    image: "../../assets/agrohive.webp",
+    image: "/Company-Website/assets/agrohive.webp",
   },
   {
     title: "MotoSpec-Genie",
     description:
       "MotoSpec-Genie is an AI-driven web app providing detailed car and bike specs and comparisons. It utilizes Generative AI for accurate insights, features an AI chatbot, and offers downloadable PDF reports.",
-    image: "../../assets/ecotrack.webp",
+    image: "/Company-Website/assets/ecotrack.webp",
   },
   {
     title: "Framers",
     description:
       "FRAMERS is a smart eyewear solution that uses AI-powered face shape detection and Virtual Try-On to recommend personalized frames. Its intuitive interface enhances the online shopping experience, making it convenient and stylish.",
-    image: "../../assets/Framers.webp",
+    image: "/Company-Website/assets/Framers.webp",
   },
   {
     title: "Eatsy",
     description:
       "Eatsy is an online food ordering platform that simplifies dining by reducing wait times, eliminating errors, and providing real-time updates.",
-    image: "../../assets/Eatsy.webp",
+    image: "/Company-Website/assets/Eatsy.webp",
   },
 ];
 

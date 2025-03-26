@@ -6,7 +6,7 @@
     <title>Team Cards</title>
     <link rel="stylesheet" href="./Minds.css" />
     <!-- Add Navbar CSS -->
-    <link rel="stylesheet" href="../../Components/Navbar/Nav.css" />
+    <link rel="stylesheet" href="/Company-Website/Components/Navbar/Nav.css" />
     <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -18,24 +18,24 @@
     <main>
       <!-- Navbar -->
       <nav class="navbar">
-        <div class="logo">
-          <a href="../Glimpse/Glimpse.html"><img src="../../assets/bbbb-02[1].png" alt="logo"></a>
-        </div>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <ul class="nav-links">
-          <div class="nav-left">
-            <li><a href="../Glimpse/Glimpse.html">Glimpse</a></li>
-            <li><a href="../Offerings/Offerings.html">Offerings</a></li>
+          <div class="logo">
+            <a href="/Company-Website/Pages/Glimpse/Glimpse.html"><img src="/Company-Website/assets/bbbb-02[1].png" alt="logo"></a>
           </div>
-          <div class="nav-right">
-            <li><a href="../Minds/Minds.html" class="active">Minds Behind</a></li>
-            <li><a href="../LetsTalk/LetsTalk.html">Let's Talk</a></li>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
           </div>
-        </ul>
+          <ul class="nav-links">
+            <div class="nav-left">
+              <li><a href="/Company-Website/Pages/Glimpse/Glimpse.html">Glimpse</a></li>
+              <li><a href="/Company-Website/Pages/Offerings/Offerings.html">Offerings</a></li>
+            </div>
+            <div class="nav-right">
+              <li><a href="/Company-Website/Pages/Minds/Minds.html" class="active">Minds Behind</a></li>
+              <li><a href="/Company-Website/Pages/LetsTalk/LetsTalk.html">Let's Talk</a></li>
+            </div>
+          </ul>
       </nav>
 
       <div class="background-image">
@@ -59,7 +59,7 @@
             </div>
             <div class="story-image">
               <div class="image-placeholder">
-                <img src="../../assets/os.webp" alt="Our Story Image" />
+                <img src="/Company-Website/assets/os.webp" alt="Our Story Image" />
               </div>
             </div>
           </div>
@@ -76,13 +76,13 @@
     </main>
 
     <!-- Add Navbar JS -->
-    <script src="../../Components/Navbar/Nav.js"></script>
+    <script src="/Company-Website/Components/Navbar/Nav.js"></script>
     <!-- Add the new external JS file -->
     <script src="./Minds.js"></script>
     <!-- Footer loading script -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-      fetch("../../Components/Footer/Footer.html")
+      fetch("/Company-Website/Components/Footer/Footer.html")
         .then(response => response.text())
         .then(data => {
           document.getElementById("footer-container").innerHTML = data;
@@ -91,12 +91,12 @@
           const link = document.createElement("link");
           link.rel = "stylesheet";
           link.type = "text/css";
-          link.href = "../../Components/Footer/Footer.css";
+          link.href = "/Company-Website/Components/Footer/Footer.css";
           document.head.appendChild(link);
           
           // Load Footer JS
           const script = document.createElement("script");
-          script.src = "../../Components/Footer/Footer.js";
+          script.src = "/Company-Website/Components/Footer/Footer.js";
           script.onload = () => console.log("Footer JS loaded successfully");
           script.onerror = () => console.error("Failed to load Footer JS");
           document.body.appendChild(script);

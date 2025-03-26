@@ -10,7 +10,7 @@
 
 /* About Background Image Section */
 .About-background-image {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/pixelcut-.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Company-Website/assets/pixelcut-.png');
   background-size: cover;
   background-position: center;
   height: 500px;
@@ -34,7 +34,7 @@
 
 /* About Story Section */
 .about-story {
-  background-image: url('./assets/path_to_handshake.webp');
+  background-image: url('/Company-Website/assets/path_to_handshake.webp');
   background-size: cover;
   background-position: center;
   height: 60vh;

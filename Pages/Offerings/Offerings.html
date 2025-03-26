@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offerings</title>
     <link rel="stylesheet" href="./Offerings.css">
-    <link rel="stylesheet" href="../../Components/Navbar/Nav.css" />
+    <link rel="stylesheet" href="/Company-Website/Components/Navbar/Nav.css"/>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -16,30 +16,30 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="../../Components/Navbar/Nav.js"></script>
+    <script src="/Company-Website/Components/Navbar/Nav.js"></script>
 </head>
 <body>
     
     <main class="about-container">
       <nav class="navbar">
-        <div class="logo">
-          <a href="../Glimpse/Glimpse.html"><img src="../../assets/bbbb-02[1].png" alt="logo"></a>
-        </div>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <ul class="nav-links">
-          <div class="nav-left">
-            <li><a href="../Glimpse/Glimpse.html">Glimpse</a></li>
-            <li><a href="../Offerings/Offering.html" class="active">Offerings</a></li>
+          <div class="logo">
+            <a href="/Company-Website/Pages/Glimpse/Glimpse.html"><img src="/Company-Website/assets/bbbb-02[1].png" alt="logo"></a>
           </div>
-          <div class="nav-right">
-            <li><a href="../Minds/Minds.html" >Minds Behind</a></li>
-            <li><a href="../LetsTalk/LetsTalk.html">Let's Talk</a></li>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
           </div>
-        </ul>
+          <ul class="nav-links">
+            <div class="nav-left">
+              <li><a href="/Company-Website/Pages/Glimpse/Glimpse.html">Glimpse</a></li>
+              <li><a href="/Company-Website/Pages/Offerings/Offerings.html" class="active">Offerings</a></li>
+            </div>
+            <div class="nav-right">
+              <li><a href="/Company-Website/Pages/Minds/Minds.html">Minds Behind</a></li>
+              <li><a href="/Company-Website/Pages/LetsTalk/LetsTalk.html">Let's Talk</a></li>
+            </div>
+          </ul>
       </nav>
         <section class="About-background-image">
                 <p>Offerings</p>
@@ -185,7 +185,7 @@
     </main>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-    fetch("../../Components/Footer/Footer.html")
+    fetch("/Company-Website/Components/Footer/Footer.html")
       .then(response => response.text())
       .then(data => {
         document.getElementById("footer-container").innerHTML = data;
@@ -194,12 +194,12 @@
         const link = document.createElement("link");
         link.rel = "stylesheet";
         link.type = "text/css";
-        link.href = "../../Components/Footer/Footer.css";
+        link.href = "/Company-Website/Components/Footer/Footer.css";
         document.head.appendChild(link);
         
         // Load Footer JS
         const script = document.createElement("script");
-        script.src = "../../Components/Footer/Footer.js";
+        script.src = "/Company-Website/Components/Footer/Footer.js";
         script.onload = () => console.log("Footer JS loaded successfully");
         script.onerror = () => console.error("Failed to load Footer JS");
         document.body.appendChild(script);

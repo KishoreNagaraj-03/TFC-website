@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="./LetsTalk.css">
-    <link rel="stylesheet" href="../../Components/Navbar/Nav.css"> <!-- Added Navbar CSS -->
+    <link rel="stylesheet" href="/Company-Website/Components/Navbar/Nav.css"> <!-- Added Navbar CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -14,22 +14,22 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <a href="../Glimpse/Glimpse.html"><img src="../../assets/bbbb-02[1].png" alt="logo"></a>
+        <a href="/Company-Website/Pages/Glimpse/Glimpse.html"><img src="/Company-Website/assets/bbbb-02[1].png" alt="logo"></a>
         </div>
         <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
         </div>
         <ul class="nav-links">
-            <div class="nav-left">
-                <li><a href="../Glimpse/Glimpse.html">Glimpse</a></li>
-                <li><a href="../Offerings/Offerings.html">Offerings</a></li>
-            </div>
-            <div class="nav-right">
-                <li><a href="../Minds/Minds.html">Minds Behind</a></li>
-                <li><a href="../LetsTalk/LetsTalk.html" class="active">Let's Talk</a></li>
-            </div>
+        <div class="nav-left">
+            <li><a href="/Company-Website/Pages/Glimpse/Glimpse.html" >Glimpse</a></li>
+            <li><a href="/Company-Website/Pages/Offerings/Offerings.html">Offerings</a></li>
+        </div>
+        <div class="nav-right">
+            <li><a href="/Company-Website/Pages/Minds/Minds.html">Minds Behind</a></li>
+            <li><a href="/Company-Website/Pages/LetsTalk/LetsTalk.html" class="active">Let's Talk</a></li>
+        </div>
         </ul>
     </nav>
     <div class="contact-us-page">
@@ -110,13 +110,13 @@
     <!-- Existing scripts -->
     <script>
         $(function() {
-            $("#footer-container").load("../../Components/Footer/Footer.html", function() {
+            $("#footer-container").load("/Company-Website/Components/Footer/Footer.html", function() {
                 $("<link/>", {
                     rel: "stylesheet",
                     type: "text/css",
-                    href: "../../Components/Footer/Footer.css"
+                    href: "/Company-Website/Components/Footer/Footer.css"
                 }).appendTo("head");
-                $.getScript("../../Components/Footer/Footer.js")
+                $.getScript("/Company-Website/Components/Footer/Footer.js")
                     .done(function() {
                         console.log("Footer JS loaded successfully");
                     })
@@ -128,7 +128,7 @@
     </script>
 
     <script src="./LetsTalk.js"></script>
-    <script src="../../Components/Navbar/Nav.js"></script> <!-- Added Navbar JS -->
+    <script src="/Company-Website/Components/Navbar/Nav.js"></script> <!-- Added Navbar JS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         emailjs.init("KzbUKFvgwl5YNrNew");

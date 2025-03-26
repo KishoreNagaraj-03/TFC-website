@@ -19,7 +19,7 @@
 }
 
 .background-image {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets//path_to_handshake.webp');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Company-Website/assets/path_to_handshake.webp');
   background-size: cover;
   background-position: center;
   height: 500px;
@@ -213,15 +213,15 @@
 }
 
 .phone-icon {
-  background-image: url('../../assets/phoneicon.png');
+  background-image: url('/Company-Website/assets/phoneicon.png');
 }
 
 .envelope-icon {
-  background-image: url('../../assets/envelope.png');
+  background-image: url('/Company-Website/assets/envelope.png');
 }
 
 .mappin-icon {
-  background-image: url('../../assets/location.png');
+  background-image: url('/Company-Website/assets/location.png');
 }
 
 .info-content {
