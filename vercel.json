@@ -1,3 +1,11 @@
 {
-  "routes": [{ "src": "/", "dest": "/Pages/Glimpse/Glimpse.html" }]
+  "routes": [
+    { "src": "/", "dest": "/pages/glimpse/glimpse.html" },
+    { "src": "/glimpse", "dest": "/pages/glimpse/glimpse.html" },
+    { "src": "/offerings", "dest": "/pages/offerings/offerings.html" },
+    { "src": "/minds", "dest": "/pages/minds/minds.html" },
+    { "src": "/lets-talk", "dest": "/pages/letsTalk/letsTalk.html" },
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/components/(.*)", "dest": "/components/$1" }
+  ]
 }
