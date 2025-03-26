@@ -5,7 +5,15 @@
     { "src": "/Offerings", "dest": "/Pages/Offerings/Offerings.html" },
     { "src": "/Minds", "dest": "/Pages/Minds/Minds.html" },
     { "src": "/LetsTalk", "dest": "/Pages/LetsTalk/LetsTalk.html" },
-    { "src": "/assets/(.*)", "dest": "/assets/$1" },
-    { "src": "/Components/(.*)", "dest": "/Components/$1" }
+
+    { "src": "/Pages/Glimpse/(.*)", "dest": "/Pages/Glimpse/$1" },
+    { "src": "/Pages/Offerings/(.*)", "dest": "/Pages/Offerings/$1" },
+    { "src": "/Pages/Minds/(.*)", "dest": "/Pages/Minds/$1" },
+    { "src": "/Pages/LetsTalk/(.*)", "dest": "/Pages/LetsTalk/$1" },
+
+    { "src": "/Components/Footer/(.*)", "dest": "/Components/Footer/$1" },
+    { "src": "/Components/Navbar/(.*)", "dest": "/Components/Navbar/$1" },
+
+    { "src": "/assets/(.*)", "dest": "/assets/$1" }
   ]
 }
